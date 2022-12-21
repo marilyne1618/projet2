@@ -1,0 +1,189 @@
+@font-face {
+    font-family: raleway;
+    src: url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCFPrEHJA.woff2) format('woff2');
+}
+
+/*Feuille style CSS de base */
+body {
+    font: 16px 'Raleway';
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.divImage {
+    height: 19px;
+}
+
+.divImage img {
+    width: 61px;
+}
+
+nav {
+    display: flex;
+}
+
+nav:hover {
+    border-color: blue;
+}
+
+.navA {
+    display: flex;
+    padding: 33px;
+    text-align: center;
+    line-height: 19px;
+    text-decoration: none;
+    color: black;
+    border-top: 2px solid transparent;
+    cursor: pointer;
+}
+
+.navA:hover {
+    color: blue;
+    /*les mots deviennent bleu lorsque le curseur passe dessus */
+    border-color: blue;
+}
+
+/* contenu majoritaire */
+.main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 63px;
+}
+
+/*Trouvez votre hébergement pour des vacances de rêves */
+.titreSection {
+    font-size: 22px;
+    margin-bottom: 0;
+}
+
+/*Formulaire de recherche */
+#divBarredeRecherche {
+    display: flex;
+    align-items: center;
+}
+
+#divLocalisation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 15px 0 0 15px;
+    background: #F2F2F2;
+
+}
+
+/*Zone d'écriture de recherche des villes */
+.inputsearch {
+    padding-left: 16px;
+    font-size: 18px;
+    height: 50px;
+    border: 1px solid #F2F2F2;
+    outline: none;
+}
+
+/*couleur et taille du texte dans le champs de saisie des villes */
+::placeholder {
+    color: black;
+    font-weight: 700px;
+}
+
+/*Bouton bleu de recherche */
+.buttonRechercher {
+    height: 49px;
+    background: #0065FC;
+    border: 1px solid #0065FC;
+    border-radius: 0px 15px 15px 0px;
+    font-size: 18px;
+    color: white;
+}
+
+/*Ne pas faire apparaître l'icône de la loupe pour écran desktop*/
+.loupe {
+    display: none;
+}
+
+.Rechercher {
+    display: block;
+}
+
+/*Nouvelles règles pour écrans de moins de 992px de large*/
+@media all and (min-width : 992px) {
+
+    body {
+        width: 1400px;
+    }
+}
+
+/*Nouvelles règles pour tablettes si la fenêtre plus de 768px de large*/
+@media all and (min-width : 768px) {
+
+    body {
+        padding-inline: 6%;
+    }
+    
+}
+
+/*nouvelles règles pour mobiles si la fenêtre fais en-dessous de 768px*/
+@media all and (max-width : 768px) {
+
+    body {
+        max-width: 376px;
+        margin: 0;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: normal;
+    }
+    
+    .divImage {
+        padding-top: 21px;
+        padding-bottom: 25px;
+        justify-content: center;
+    }
+
+    .navA {
+        width: 45%;
+        padding: 5%;
+        justify-content: center;
+        border-top: none;
+        border-bottom: solid #F2F2F2;
+        cursor: pointer;
+    }
+    #sectionRecherche {
+        padding-inline: 8%;
+    }
+
+    div {
+        display: flex;
+    }
+
+    .infoSection {
+        margin-bottom: 36px;
+    }
+
+    .buttonRechercher {
+        width: 49px;
+        padding-inline: 3%;
+    }
+
+    /*Ne pas faire apparaître le mot "Rechercher" pour version mobile*/
+    .Rechercher {
+        display: none;
+    }
+
+    .loupe {
+        display: block;
+    }
+
+    .divFiltres {
+        flex-direction: column;
+    }
+
+}
