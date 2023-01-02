@@ -75,13 +75,16 @@ nav:hover {
     width: 50px;
     border-radius: 15px 0 0 15px;
     background: #F2F2F2;
+}
 
+.IconMap {
+    font-size: 20px;
 }
 
 /*Zone d'écriture de recherche des villes */
 .inputsearch {
+    padding-right: 50px;
     padding-left: 16px;
-    font-size: 18px;
     height: 50px;
     border: 1px solid #F2F2F2;
     outline: none;
@@ -89,12 +92,14 @@ nav:hover {
 
 /*couleur et taille du texte dans le champs de saisie des villes */
 ::placeholder {
+    font-size: 18px;
+    font-weight: 700;
     color: black;
-    font-weight: 700px;
 }
 
 /*Bouton bleu de recherche */
 .buttonRechercher {
+    width: 132px;
     height: 49px;
     background: #0065FC;
     border: 1px solid #0065FC;
@@ -112,6 +117,48 @@ nav:hover {
     display: block;
 }
 
+/*Partie Filtres*/
+.divFiltres {
+    display: flex;
+    align-items: center;
+    margin-top: 46px;
+}
+
+.texteFiltres {
+    margin-right: 20px;
+}
+
+.boutonFiltres {
+    display: flex;
+    justify-content: space-between;
+}
+
+.divtitreFiltres {
+    display: flex;
+    align-items: center;
+    border: 2px solid #D9D9D9;
+    border-radius: 30px;
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 40px;
+    height: 50px;
+
+}
+
+.divtitreFiltres:hover {
+    /*Le fond des titres filtres devient bleu pâle au survol du curseur*/
+    background: #DEEBFF;
+}
+
+.filtreIcons {
+    color: #0065FC;
+    margin-right: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 20px;
+}   
+
 /*Nouvelles règles pour écrans de moins de 992px de large*/
 @media all and (min-width : 992px) {
 
@@ -121,19 +168,38 @@ nav:hover {
 }
 
 /*Nouvelles règles pour tablettes si la fenêtre plus de 768px de large*/
-@media all and (min-width : 768px) {
+@media screen and (min-width : 768px) and (max-width : 992px) {
 
     body {
         padding-inline: 6%;
     }
-    
+
+    h3 {
+        font-size: 17px;
+    }
+
+    .divtitreFiltres {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-right: 10px;
+    }
+
+    .texteFiltres {
+        margin-right: 10px;
+    }
+
+
+    .filtreIcons {
+        margin-right: 0;
+        padding-left: 0;
+    }   
+     
 }
 
 /*nouvelles règles pour mobiles si la fenêtre fais en-dessous de 768px*/
-@media all and (max-width : 768px) {
+@media screen and (max-width : 768px) {
 
     body {
-        max-width: 376px;
         margin: 0;
     }
 
@@ -141,7 +207,7 @@ nav:hover {
         flex-direction: column;
         align-items: normal;
     }
-    
+
     .divImage {
         padding-top: 21px;
         padding-bottom: 25px;
@@ -156,8 +222,9 @@ nav:hover {
         border-bottom: solid #F2F2F2;
         cursor: pointer;
     }
+
     #sectionRecherche {
-        padding-inline: 8%;
+        padding-inline: 6%;
     }
 
     div {
@@ -169,8 +236,8 @@ nav:hover {
     }
 
     .buttonRechercher {
-        width: 49px;
         padding-inline: 3%;
+        width: 50px;
     }
 
     /*Ne pas faire apparaître le mot "Rechercher" pour version mobile*/
@@ -183,7 +250,24 @@ nav:hover {
     }
 
     .divFiltres {
-        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .boutonFiltres {
+        flex-wrap: wrap;
+        justify-content: stretch;
+    }
+
+    .divtitreFiltres {
+        margin-right: 0;
+        font-size: 11px;
+        padding-left: 20px;
+        padding-right: 10px;
+    }
+
+    .texteFiltres {
+        font-size: 18px;
     }
 
 }

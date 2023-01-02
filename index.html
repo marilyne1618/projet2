@@ -26,10 +26,10 @@
     <div class="divImage">
       <img src="./images/logo/booki.png" alt="booki">
     </div>
-      <nav>
-        <a class="navA" href="#">Hébergements</a>
-        <a class="navA" href="#">Activités</a>
-      </nav>
+    <nav>
+      <a class="navA" href="#">Hébergements</a>
+      <a class="navA" href="#">Activités</a>
+    </nav>
   </header>
 
   <!--Main contenu majoritaire-->
@@ -41,12 +41,49 @@
 
       <!--Barre de recherche-->
       <div id="divBarredeRecherche">
-        <div id="divLocalisation"><i class="fa-solid fa-location-dot"></i></div>
+        <div id="divLocalisation">
+          <i class="fa-solid fa-location-dot IconMap"></i>
+        </div>
         <input class="inputsearch" type="search" placeholder="Marseille, France">
         <button class="buttonRechercher">
           <span class="Rechercher">Rechercher</span>
-          <span class="loupe"><i class="fa-solid fa-magnifying-glass"></i></span>
+          <span class="loupe">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
         </button>
+      </div>
+
+      <!--Partie Filtres-->
+      <div class="divFiltres">
+        <span class="filtres">
+          <h3 class="texteFiltres">Filtres</h3>
+        </span>
+        <div class="boutonFiltres">
+        <div class="divtitreFiltres">
+          <i class="fa-sharp fa-solid fa-money-bill-wave filtreIcons"></i>
+          <span class="titreFiltres">
+            <h3>Économique</h3>
+          </span>
+        </div>
+        <div class="divtitreFiltres">
+          <i class="fa-sharp fa-solid fa-person filtreIcons"></i>
+          <span class="titreFiltres">
+            <h3>Familial</h3>
+          </span>
+        </div>
+        <div class="divtitreFiltres">
+          <i class="fa-sharp fa-solid fa-heart filtreIcons"></i>
+          <span class="titreFiltres">
+            <h3>Romantique</h3>
+          </span>
+        </div>
+        <div class="divtitreFiltres">
+          <i class="fa-solid fa-dog filtreIcons"></i>
+          <span class="titreFiltres">
+            <h3>Animaux autorisés</h3>
+          </span>
+          </div>
+        </div>
       </div>
     </section>
 
