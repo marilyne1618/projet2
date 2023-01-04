@@ -1,5 +1,5 @@
 @font-face {
-    font-family: raleway;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
     src: url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCFPrEHJA.woff2) format('woff2');
 }
 
@@ -7,6 +7,7 @@
 body {
     font: 16px 'Raleway';
     margin: auto;
+    box-sizing: border-box;
 }
 
 header {
@@ -27,25 +28,19 @@ nav {
     display: flex;
 }
 
-nav:hover {
-    border-color: blue;
-}
-
 .navA {
     display: flex;
     padding: 33px;
     text-align: center;
-    line-height: 19px;
     text-decoration: none;
-    color: black;
     border-top: 2px solid transparent;
     cursor: pointer;
 }
 
+/*les mots deviennent bleu lorsque le curseur passe dessus */
 .navA:hover {
-    color: blue;
-    /*les mots deviennent bleu lorsque le curseur passe dessus */
-    border-color: blue;
+    color: #0065FC;
+    border-color: #0065FC;
 }
 
 /* contenu majoritaire */
@@ -65,6 +60,7 @@ nav:hover {
 #divBarredeRecherche {
     display: flex;
     align-items: center;
+    padding-top: 20px;
 }
 
 #divLocalisation {
@@ -122,6 +118,11 @@ nav:hover {
     display: flex;
     align-items: center;
     margin-top: 46px;
+    margin-bottom: 40px;
+}
+
+.filtres {
+    font-weight: 700;
 }
 
 .texteFiltres {
@@ -135,19 +136,18 @@ nav:hover {
 
 .divtitreFiltres {
     display: flex;
+    justify-content: center;
     align-items: center;
     border: 2px solid #D9D9D9;
     border-radius: 30px;
     cursor: pointer;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-inline: 20px;
     margin-right: 40px;
     height: 50px;
-
 }
 
+/*Le fond des titres filtres devient bleu pâle au survol du curseur*/
 .divtitreFiltres:hover {
-    /*Le fond des titres filtres devient bleu pâle au survol du curseur*/
     background: #DEEBFF;
 }
 
@@ -158,6 +158,27 @@ nav:hover {
     padding-right: 5px;
     font-size: 20px;
 }   
+
+/*INFO ICONE*/
+.info {
+    display: flex;
+    align-items: center;
+}
+
+/*Icone mis en couleur bleu*/
+    .couleurbleu {
+        color: #0065FC;
+        padding-left: 9px;
+        padding-top: 3px;
+    }
+
+.parentIcon {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    margin-right: 6px;
+}
 
 /*Nouvelles règles pour écrans de moins de 992px de large*/
 @media all and (min-width : 992px) {
@@ -188,12 +209,10 @@ nav:hover {
         margin-right: 10px;
     }
 
-
     .filtreIcons {
         margin-right: 0;
         padding-left: 0;
-    }   
-     
+    }    
 }
 
 /*nouvelles règles pour mobiles si la fenêtre fais en-dessous de 768px*/
@@ -227,12 +246,29 @@ nav:hover {
         padding-inline: 6%;
     }
 
+    .titreSection {
+        margin-top: 30px;
+        padding-right: 10%;
+    }
+
     div {
         display: flex;
     }
 
     .infoSection {
         margin-bottom: 36px;
+    }
+
+    #divBarredeRecherche {
+        padding-top: 0;
+    }
+
+    .IconMap {
+        font-size: 18px;
+    }
+
+    .inputsearch {
+        padding-right: 20px;
     }
 
     .buttonRechercher {
@@ -243,31 +279,55 @@ nav:hover {
     /*Ne pas faire apparaître le mot "Rechercher" pour version mobile*/
     .Rechercher {
         display: none;
+        font-size: 18px;
     }
 
     .loupe {
         display: block;
+        font-size: 15px;
     }
 
     .divFiltres {
-        display: flex;
-        flex-wrap: wrap;
+        display: block;
+        margin-top: 34px;
+        margin-bottom: 20px;
     }
 
     .boutonFiltres {
+        display: flex;
         flex-wrap: wrap;
-        justify-content: stretch;
+        width: 375px;
     }
 
     .divtitreFiltres {
+        justify-content: left;
+        flex: 2;
         margin-right: 0;
+        margin-block: 10px;
+        margin-left: 5px;
+        padding-inline: 4%;
         font-size: 11px;
-        padding-left: 20px;
-        padding-right: 10px;
     }
 
     .texteFiltres {
         font-size: 18px;
+        margin-bottom: 10px;
     }
 
+    .filtreIcons {
+        padding-left: 0;
+        font-size: 18px;
+    }
+
+    .parentIcon {
+        width: 22px;
+        height: 17px;
+        border-radius: 20px;
+    }
+
+    .couleurbleu {
+        padding-left: 6px;
+        padding-top: 3px;
+        font-size: 12px;
+    }
 }
