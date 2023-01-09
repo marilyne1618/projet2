@@ -157,20 +157,21 @@ nav {
     padding-left: 5px;
     padding-right: 5px;
     font-size: 20px;
-}   
+}
 
 /*INFO ICONE*/
 .info {
     display: flex;
     align-items: center;
+    margin-bottom: 22px;
 }
 
 /*Icone mis en couleur bleu*/
-    .couleurbleu {
-        color: #0065FC;
-        padding-left: 9px;
-        padding-top: 3px;
-    }
+.couleurbleu {
+    color: #0065FC;
+    padding-left: 9px;
+    padding-top: 3px;
+}
 
 .parentIcon {
     width: 25px;
@@ -178,6 +179,157 @@ nav {
     border: 2px solid #D9D9D9;
     border-radius: 25px;
     margin-right: 10px;
+}
+
+/*HEBERGEMENTS*/
+a {
+    text-decoration: none;
+    color: black;
+    padding-left: 20px;
+}
+
+.titreBloc1 {
+    margin-bottom: 0;
+    font-size: 22px;
+}
+
+.Prix {
+    margin-block: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+span {
+    font-weight: 700;
+}
+
+.etoile {
+    color: #D9D9D9;
+}
+
+.etoile:hover {
+    color: #0065FC;
+}
+
+.CardHebergementsPopulaires {
+    display: flex;
+    justify-content: space-around;
+}
+
+.bloc {
+    display: flex;
+    justify-content: space-around;
+    margin-block: 10px;
+}
+
+.backgris {
+    background: #F2F2F2;
+}
+
+.backBlanc {
+    width: 246px;
+    height: 200px;
+    background-color: white;
+    padding: 6px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+}
+
+.sizeHebergements {
+    justify-content: space-between;
+    flex: 2;
+    height: 650px;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+
+.sizePopulaires {
+    justify-content: space-between;
+    flex: 1;
+    height: 630 px;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+
+.blocHebergements {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.imgHebergements {
+    object-fit: cover;
+    width: 246px;
+    height: 124px;
+    margin-bottom: 5px;
+    border-radius: 15px 15px 0 0;
+}
+
+.titrePhotos {
+    padding-left: 10px;
+}
+
+.afficherPlus {
+    font-weight: bold;
+    padding-left: 25px;
+    margin-top: 0;
+    padding-bottom: 20px;
+}
+
+.titreBloc2 {
+    margin-bottom: 0;
+    margin-top: 15px;
+    padding-left: 10px;
+    font-size: 22px;
+}
+
+
+/*LES PLUS POPULAIRES*/
+.blocPopulaires {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 20px 15px 20px;
+}
+
+.IconGraphique {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.graphique {
+    font-size: x-large;
+    color: #0065FC;
+}
+
+.backBlancPopulaires {
+    display: flex;
+    width: 420px;
+    height: 144px;
+    margin-block: 15px;
+    background-color: white;
+    padding: 6px;
+    border-radius: 20px;
+}
+
+.imgPopulaires {
+    object-fit: cover;
+    width: 137px;
+    height: 144px;
+    margin-bottom: 5px;
+    border-radius: 15px 0 0 15px;
+}
+
+.titrePhotosPopulaires {
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.PrixPopulaires {
+    margin-block: 10px;
+    font-size: 14px;
+    padding-bottom: 40px;
 }
 
 /*Nouvelles règles pour écrans de moins de 992px de large*/
@@ -221,7 +373,22 @@ nav {
     .filtreIcons {
         margin-right: 0;
         padding-left: 0;
-    }    
+    }
+
+    .CardHebergementsPopulaires {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .sizeHebergements {
+        justify-content: space-between;
+        flex: 2;
+        width: 880px;
+        height: 626px;
+        margin-right: 20px;
+        border-radius: 20px;
+    }
 }
 
 /*nouvelles règles pour mobiles si la fenêtre fais en-dessous de 768px*/
