@@ -393,7 +393,7 @@ footer {
     width: 70%;
     height: 190px;
     margin-left: 50px;
-    
+
 }
 
 
@@ -572,7 +572,7 @@ footer {
     .ActivitesMarseille {
         margin-top: 30px;
     }
-    
+
     .imgActivites {
         height: 150px;
     }
@@ -589,14 +589,14 @@ footer {
     }
 
     /*FOOTER PIED DE PAGE*/
-    
+
 
     .blocFooter {
         width: 75%;
         margin-left: 50px;
     }
 
-    
+
 }
 
 /*nouvelles règles pour mobiles si la fenêtre fais en-dessous de 768px*/
